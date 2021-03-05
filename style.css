@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.content{
+    max-width: 1250px;/*tamaño maximo de amplitud*/
+    margin: auto;/*lo hacer para poder centrarlo*/
+    padding: 0px 60px;
+}
+.navbar{
+    position: fixed;/*lo desliga para que se endividual*/
+    z-index: 5;/*ni idea*/
+    width: 100%;/*llegue hasta dondfe la pantalla crezca*/
+    padding: 10px 0;
+    background: crimson;
+}
+.navbar .content{
+    display: flex;/*para poder moldearlos*/
+    align-items: center;
+    justify-content: space-between;/*dejarlos cada uno a cada lado*/
+}
+.navbar .logo a{
+    color: darkgray;
+    font-size: 30px;
+    font-weight: 800;/*el grosor, pero no funciona con todos los valores solo unos especificos*/
+    text-decoration: none;/*quitar todolo que nosea el texto*/
+}
+.navbar .menu-list{
+    display: inline-flex;/*lo pone en linea por lo que son varios elemntos*/
+}
+.menu-list li a{
+    color: darkgray;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    text-decoration: none;
+}
+.menu-list li{
+    list-style: none;/*quita los puntos o los numeros de la lista*/
+}
+.banner{
+    height: 70vh;/*vh va a ser el tamaño de el espacio del banner, vh --> el tamaño de la pagina en ese momento, no cambia a menos de que la pagina dambie de altura*/
+    background: url(2248063.jpg) no-repeat; /*pone una imagen como fondo*/
+    background-size: contain;/*que cubra en su totalidad el espacio en el que encuentra*/
+    background-position: center;/*centra la imagen*/
+    background-attachment: fixed;/*desliga el banner de el texto poniendolo atras en este caso*/
+}
+.about{
+    padding: 40px;
+}
+.about .title{
+    font-size: 35px;
+    font-weight: 700;
+}
+.about p{
+    padding-top: 20px;
+    text-align: justify;
+}
+
+@media (max-width: 700px){ /*cuando llega a 500 el anchor de la pagina*/
+    .navbar .menu-list{
+        /*display:none;*//*desaparece*/
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        max-width: 400px;
+        background: #222;
+        display: block;/*al volver bloque lo objetos adentrose obligan a existir adentro de el y si nel porcentaje de crecimiento no se permite crecer ya que lo obliga a crecer*/
+        text-align: center;
+        padding: 40px 0;
+    }
+    .navbar .menu-list li{
+        margin-top: 50px;
+    }
+    .navbar .menu-list li a{
+        font-size: 50px;
+    }
+}

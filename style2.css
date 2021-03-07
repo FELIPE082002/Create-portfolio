@@ -18,7 +18,6 @@ nav{
 }
 nav .content{
     display:flex;
-    align-items: center;
     float: right;
 }
 nav .content .menu-list{

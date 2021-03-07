@@ -13,25 +13,49 @@ nav{
     position: fixed;
     z-index: 5;
     width: 100%;
-    background-color: #0C0D36;
-    padding: 10px 0px;
+    background-color: /*#0C0D36*/ blueviolet;
 }
 nav .content{
-    display:flex;
+    display:flex; 
     float: right;
 }
 nav .content .menu-list{
     display: inline-flex;
 }
+.menu-list li{
+    position: relative;
+    height: 50px;
+    list-style: none;
+    justify-content: center;
+}
+.menu-list > li{
+    float: left;
+}
 .menu-list li a{
+    position: relative;
+    top: 25%;
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 15px;
-   
-    padding-right: 10px;
+    padding: 10px;
 }
-.menu-list li{
-    list-style: none;
+.menu-list li ul{
+    width: 98.5px;
+    top: 50px;
+    background-color: #b6b7db;
+    display: none;
+    position: absolute;
+}
+.menu-list li ul li{
+    justify-content: center;
+    display: flex;
+}
+.menu-list li:hover > ul{
+    display: block;
+}
+.menu-list li:hover{
+    background-color: rgb(126, 126, 126);
+    color: black;
 }
 .encabezado{
     align-items: center;
